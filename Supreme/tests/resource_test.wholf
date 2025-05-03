@@ -1,0 +1,27 @@
+// Kaynak testi
+fegn Supreme {
+    // Betik kaynak testi
+    loadResource: ("script_test", "script.wholf", "SCRIPT") => {
+        Assert.equal("SCRIPT", getResourceType("script_test"))
+    }
+    
+    // Görüntü kaynak testi
+    loadResource: ("image_test", "image.png", "IMAGE") => {
+        Assert.equal("IMAGE", getResourceType("image_test"))
+    }
+    
+    // Ses kaynak testi
+    loadResource: ("audio_test", "sound.mp3", "AUDIO") => {
+        Assert.equal("AUDIO", getResourceType("audio_test"))
+    }
+    
+    // Video kaynak testi
+    loadResource: ("video_test", "movie.mp4", "VIDEO") => {
+        Assert.equal("VIDEO", getResourceType("video_test"))
+    }
+    
+    // Metin kaynak testi
+    loadResource: ("text_test", "text.txt", "TEXT") => {
+        Assert.equal("TEXT", getResourceType("text_test"))
+    }
+}

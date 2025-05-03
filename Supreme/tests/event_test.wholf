@@ -1,0 +1,27 @@
+// Olay testi
+fegn Supreme {
+    // Çevre değişkeni değiştiğinde
+    onVariableChange: ("test", callback) => {
+        Assert.notEqual(callback, null)
+    }
+    
+    // Depolama değiştiğinde
+    onStorageChange: ("key", callback) => {
+        Assert.notEqual(callback, null)
+    }
+    
+    // Betik çalıştırıldığında
+    onCommand: ("command", callback) => {
+        Assert.notEqual(callback, null)
+    }
+    
+    // Kaynak yüklendiğinde
+    onResourceLoad: ("id", callback) => {
+        Assert.notEqual(callback, null)
+    }
+    
+    // Kullanıcı etkileşimi
+    onUserEvent: ("name", callback) => {
+        Assert.notEqual(callback, null)
+    }
+}

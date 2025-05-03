@@ -1,0 +1,5 @@
+binary == readonly_test;
+joss  << binary(test::FALSE);
+kolege << loop::binary(){
+    joss::TRUE()
+}

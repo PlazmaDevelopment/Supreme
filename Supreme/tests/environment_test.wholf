@@ -1,0 +1,27 @@
+// Çevre değişkeni testi
+fegn Supreme {
+    // Çevre değişkeni ekleme testi
+    addVariable: ("test", "value") => {
+        Assert.equal("value", getVariable("test"))
+    }
+    
+    // Global değişken testi
+    addVariable: ("global_test", "global_value", true) => {
+        Assert.equal("global_value", getVariable("global_test"))
+    }
+    
+    // Okuma-yalnız değişken testi
+    addVariable: ("readonly_test", "readonly_value", false, true) => {
+        Assert.equal("readonly_value", getVariable("readonly_test"))
+    }
+    
+    // Değişken listesi testi
+    addVariable: ("list_test", "list_value") => {
+        Assert.contains(getVariableNames(), "list_test")
+    }
+    
+    // Değişken kontrolü testi
+    addVariable: ("check_test", "check_value") => {
+        Assert.true(hasVariable("check_test"))
+    }
+}

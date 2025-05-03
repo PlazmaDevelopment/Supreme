@@ -1,0 +1,27 @@
+// Betik testi
+fegn Supreme {
+    // Betik ekleme testi
+    addCommand: ("test", ["arg1", "arg2"], "WHOLF") => {
+        Assert.equal("test", getCommandName())
+    }
+    
+    // Python betik testi
+    addCommand: ("python_test", ["arg1", "arg2"], "PYTHON") => {
+        Assert.equal("PYTHON", getLanguage())
+    }
+    
+    // JavaScript betik testi
+    addCommand: ("js_test", ["arg1", "arg2"], "JAVASCRIPT") => {
+        Assert.equal("JAVASCRIPT", getLanguage())
+    }
+    
+    // Lua betik testi
+    addCommand: ("lua_test", ["arg1", "arg2"], "LUA") => {
+        Assert.equal("LUA", getLanguage())
+    }
+    
+    // Ruby betik testi
+    addCommand: ("ruby_test", ["arg1", "arg2"], "RUBY") => {
+        Assert.equal("RUBY", getLanguage())
+    }
+}

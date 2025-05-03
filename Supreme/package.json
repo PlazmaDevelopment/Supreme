@@ -1,0 +1,40 @@
+{
+    "name": "Supreme",
+    "version": "1.0.0",
+    "description": "Wholf Script için güçlü bir environment kütüphanesi",
+    "main": "src/Supreme.hpp",
+    "dependencies": {
+        "wholf-core": ">= 1.0.0",
+        "wholf-utils": ">= 1.0.0",
+        "wholf-network": ">= 1.0.0",
+        "wholf-filesystem": ">= 1.0.0",
+        "wholf-script": ">= 1.0.0",
+        "wholf-storage": ">= 1.0.0"
+    },
+    "devDependencies": {
+        "wholf-test": ">= 1.0.0",
+        "wholf-debug": ">= 1.0.0",
+        "wholf-lint": ">= 1.0.0"
+    },
+    "scripts": {
+        "test": "wholf test",
+        "build": "wholf build",
+        "lint": "wholf lint"
+    },
+    "keywords": [
+        "wholf",
+        "supreme",
+        "environment",
+        "script",
+        "storage",
+        "loader",
+        "interacter",
+        "event"
+    ],
+    "author": "Wholf Development Team",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wholf-lang/Supreme.git"
+    }
+}

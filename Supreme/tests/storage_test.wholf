@@ -1,0 +1,27 @@
+// Depolama testi
+fegn Supreme {
+    // Depolama ekleme testi
+    addStorage: ("test", "value", "MEMORY") => {
+        Assert.equal("value", getStorage("test"))
+    }
+    
+    // Dosya depolama testi
+    addStorage: ("file_test", "file_value", "FILE") => {
+        Assert.equal("file_value", getStorage("file_test"))
+    }
+    
+    // Veritabanı depolama testi
+    addStorage: ("db_test", "db_value", "DATABASE") => {
+        Assert.equal("db_value", getStorage("db_test"))
+    }
+    
+    // Bulut depolama testi
+    addStorage: ("cloud_test", "cloud_value", "CLOUD") => {
+        Assert.equal("cloud_value", getStorage("cloud_test"))
+    }
+    
+    // Depolama listesi testi
+    addStorage: ("list_test", "list_value", "MEMORY") => {
+        Assert.contains(getStorageKeys(), "list_test")
+    }
+}

@@ -1,0 +1,42 @@
+// Performans testi
+fegn Supreme {
+    // Büyük sayıda değişken testi
+    addVariable: ("performance_test", "value") => {
+        for (int i = 0; i < 10000; i++) {
+            addVariable("test" + i, "value" + i)
+        }
+        Assert.equal(10000, getVariableNames().length)
+    }
+    
+    // Büyük sayıda depolama testi
+    addStorage: ("performance_test", "value", "MEMORY") => {
+        for (int i = 0; i < 10000; i++) {
+            addStorage("storage" + i, "value" + i, "MEMORY")
+        }
+        Assert.equal(10000, getStorageKeys().length)
+    }
+    
+    // Büyük sayıda betik testi
+    addCommand: ("performance_test", ["arg1", "arg2"], "WHOLF") => {
+        for (int i = 0; i < 10000; i++) {
+            addCommand("script" + i, ["arg1", "arg2"], "WHOLF")
+        }
+        Assert.equal(10000, getCommandNames().length)
+    }
+    
+    // Büyük sayıda kaynak testi
+    loadResource: ("performance_test", "path", "IMAGE") => {
+        for (int i = 0; i < 10000; i++) {
+            loadResource("resource" + i, "path" + i, "IMAGE")
+        }
+        Assert.equal(10000, getResourceIds().length)
+    }
+    
+    // Büyük sayıda kullanıcı girişi testi
+    setUserInput: ("performance_test", "value") => {
+        for (int i = 0; i < 10000; i++) {
+            setUserInput("input" + i, "value" + i)
+        }
+        Assert.equal(10000, getUserInputNames().length)
+    }
+}

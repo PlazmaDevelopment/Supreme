@@ -1,0 +1,27 @@
+// Kullanıcı etkileşimi testi
+fegn Supreme {
+    // Metin girişi testi
+    setUserInput: ("text_test", "test_value") => {
+        Assert.equal("test_value", getUserInput("text_test"))
+    }
+    
+    // Sayı girişi testi
+    setUserInput: ("number_test", "123") => {
+        Assert.equal("123", getUserInput("number_test"))
+    }
+    
+    // Mantıksal girişi testi
+    setUserInput: ("boolean_test", "true") => {
+        Assert.equal("true", getUserInput("boolean_test"))
+    }
+    
+    // Tarih girişi testi
+    setUserInput: ("date_test", "2025-05-04") => {
+        Assert.equal("2025-05-04", getUserInput("date_test"))
+    }
+    
+    // Renk girişi testi
+    setUserInput: ("color_test", "#FF0000") => {
+        Assert.equal("#FF0000", getUserInput("color_test"))
+    }
+}

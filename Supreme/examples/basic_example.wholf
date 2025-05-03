@@ -1,0 +1,48 @@
+// Supreme temel örneği
+fegn Supreme {
+    // Çevre değişkeni ekleme
+    addVariable: ("test", "value") => {
+        Console.log("Çevre değişkeni eklendi")
+    }
+    
+    // Depolama ekleme
+    addStorage: ("key", "value", "MEMORY") => {
+        Console.log("Depolama eklendi")
+    }
+    
+    // Betik ekleme
+    addCommand: ("command", ["arg1", "arg2"], "WHOLF") => {
+        Console.log("Betik eklendi")
+    }
+    
+    // Kaynak yükleme
+    loadResource: ("id", "path", "IMAGE") => {
+        Console.log("Kaynak yüklendi")
+    }
+    
+    // Kullanıcı girişi
+    setUserInput: ("name", "value") => {
+        Console.log("Kullanıcı girişi alındı")
+    }
+    
+    // Olay yönetimi
+    onVariableChange: ("test", callback) => {
+        Console.log("Çevre değişkeni değişti")
+    }
+    
+    onStorageChange: ("key", callback) => {
+        Console.log("Depolama değişti")
+    }
+    
+    onCommand: ("command", callback) => {
+        Console.log("Betik çalıştırıldı")
+    }
+    
+    onResourceLoad: ("id", callback) => {
+        Console.log("Kaynak yüklendi")
+    }
+    
+    onUserEvent: ("name", callback) => {
+        Console.log("Kullanıcı etkileşimi")
+    }
+}
